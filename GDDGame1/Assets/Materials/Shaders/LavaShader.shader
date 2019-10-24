@@ -57,18 +57,18 @@
             
             float4 frag (vertexOutput IN) : COLOR{  
                 
-                half minDist = 10000; // (Infinity)
-                int minI = 0;
-                for (int i = 0; i < _Length; i++){
-                    half dist = distance(IN.pos.xy, _Points[i].xy);
-                    if (dist < minDist) {
-                        minDist = dist;
-                        minI = i;
-                    }
-                }
-                half4 color = tex2D(_RampTex, fixed2(minDist, 0.5));
-                color.a = 1;
-                return color;
+                //half minDist = 10000; // (Infinity)
+                //int minI = 0;
+                //for (int i = 0; i < _Length; i++){
+                //    half dist = distance(IN.pos.xy, _Points[i].xy);
+                //    if (dist < minDist) {
+                //        minDist = dist;
+                //        minI = i;
+                //    }
+                //}
+                //half4 color = tex2D(_RampTex, fixed2(minDist, 0.5));
+                //color.a = 1;
+                return _MainColor;
             }
 
             ENDCG
