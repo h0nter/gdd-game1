@@ -64,3 +64,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/UV_renderer.cs
