@@ -19,7 +19,6 @@ public class Collision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(invincible);
     }
     private void OnCollisionEnter(UnityEngine.Collision collision)
     {
