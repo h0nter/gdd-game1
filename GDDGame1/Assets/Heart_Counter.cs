@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Heart_Counter : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Heart_Counter : MonoBehaviour
     {
         if(health == 0)
         {
-            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            StartCoroutine(death());
         }
         if(shownHearts > health)
         {
@@ -31,5 +32,14 @@ public class Heart_Counter : MonoBehaviour
     {
         shownHearts--;
         heartCont.transform.GetChild(shownHearts).gameObject.SetActive(false);
+    }
+
+    IEnumerator death()
+    {
+        GameObject knight = GameObject.Find("Meshtint Free Knight");
+        knight.GetComponent<Animator>().SetBool("Death", true);
+        knight.GetComponent<ThirdPersonUserControl>().enabled = false;
+        yield return new WaitForSeconds(10.0f);
+        SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 }
