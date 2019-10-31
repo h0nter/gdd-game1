@@ -5,6 +5,8 @@ using UnityEngine;
 public class Collision : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public GameObject hud;
     void Start()
     {
         
@@ -19,7 +21,7 @@ public class Collision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Collision");
+            hud.GetComponent<Heart_Counter>().health-- ;
         }
     }
 }
