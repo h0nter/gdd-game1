@@ -11,9 +11,12 @@ public class Collision : MonoBehaviour
     private bool invincible;
     private float invincibilityTime = 3.0f;
     public int flashingSpeed;
+    ParticleSystem hitparticles;
+
     void Start()
     {
-        
+        hitparticles = GetComponentInChildren<ParticleSystem>();
+
     }
 
     // Update is called once per frame
@@ -21,6 +24,8 @@ public class Collision : MonoBehaviour
     {
         Debug.Log(invincible);
     }
+
+
     private void OnCollisionEnter(UnityEngine.Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && !invincible)
@@ -29,6 +34,9 @@ public class Collision : MonoBehaviour
             StartCoroutine(Invulnerability(collision.gameObject));
             StartCoroutine(redColour());
             StartCoroutine(flashing());
+            hitparticles.play();
+           
+
         }
     }
 
@@ -60,4 +68,10 @@ public class Collision : MonoBehaviour
         }
 
     }
+
+
+   
+
+
+
 }
