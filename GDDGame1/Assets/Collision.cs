@@ -34,7 +34,7 @@ public class Collision : MonoBehaviour
             StartCoroutine(Invulnerability(collision.gameObject));
             StartCoroutine(redColour());
             StartCoroutine(flashing());
-            hitparticles.play();
+            hitparticles.Play();
            
 
         }
