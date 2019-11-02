@@ -41,12 +41,3 @@ The following packages were added:
   com.unity.modules.vr@1.0.0
   com.unity.modules.wind@1.0.0
   com.unity.modules.xr@1.0.0
-
-=== Fri Nov  1 23:39:20 2019
-
-Packages were changed.
-Update Mode: mergeDefaultDependencies
-
-The following packages were added:
-  com.unity.postprocessing@2.0.15-preview
-  com.unity.progrids@3.0.3-preview.0
