@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scripts/Scenes/Menu.unity
+    guid: 153c9053d27fefa4b83c693e8e52996e
+  - enabled: 1
+    path: Assets/Scripts/Scenes/Menu2.unity
+    guid: 76313399412b344f5a332230236366f2
+  - enabled: 1
+    path: Assets/Scripts/Scenes/Level 1.unity
+    guid: 7c54ee7f460733343b1106a0d6e37850
+  - enabled: 1
+    path: Assets/Scripts/Scenes/Level 2.unity
+    guid: 2341e71430c63f0449a3a35da85206e2
+  - enabled: 1
+    path: Assets/Scripts/Scenes/Level 3.unity
+    guid: 25aa15a4fe749054eb9cf01c56061c40
+  - enabled: 1
+    path: Assets/Scripts/Scenes/CompletionScreen.unity
+    guid: 23c4b37e15ec49f4b8339699db4b426f
+  - enabled: 1
+    path: Assets/Scripts/Scenes/DeathScreen.unity
+    guid: 9ffa8c7ed7ca30f4cba1ff45007becfe
   m_configObjects: {}
